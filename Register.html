@@ -1,0 +1,48 @@
+<!-- Registration and login interface using html, css, php and mysql -->
+
+<html>
+<head>
+    <style>
+        /* Style the form elements */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            width: 100%;
+        }
+
+        /* Style the error messages */
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<h2>Registration and Login Interface</h2>
+
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div class="error"><?php echo "$username_err"; ?></div>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" value="<?php echo "$username"; ?>">
+    <div class="error"><?php echo "$password_err"; ?></div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Login</button>
+    <p>Don't have an account? <a href="register.php">Register here</a>.</p>
+
+</form>
+
+</body>
+</html>

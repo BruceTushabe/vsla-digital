@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Style the body element */
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+
+    /* Style the header element */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Style the main element */
+    main {
+      display: flex; /* Use flexbox layout */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      height: 80vh; /* Set height to 80% of viewport height */
+    }
+
+    /* Style the form element */
+    form {
+      border: 2px solid #333;
+      padding: 20px;
+      width: 300px;
+      resize: both; /* Allow resizing both horizontally and vertically */
+      overflow: auto; /* Add scrollbars if needed */
+    }
+
+    /* Style the input elements */
+    input {
+      display: block; /* Display as block-level elements */
+      width: 100%; /* Set width to 100% of parent element */
+      margin-bottom: 10px; /* Add some space below each input element */
+    }
+
+    /* Style the submit button */
+    input[type=submit] {
+      background-color: #333;
+      color:white;
+      border:none;
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>VSLA Management Information System</h1>
+  
+  <nav> 
+
+    <a href = "home.html"> Home </a>
+  </nav>
+
+</header>
+
+<main>
+  <form action="process.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="members">Members:</label>
+    <input type="number" id="members" name="members" required>
+
+    <input type="submit" value="Submit">
+  </form>
+</main>
+
+</body>
+</html> 
